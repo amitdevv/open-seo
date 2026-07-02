@@ -7,13 +7,20 @@ import {
   optionalMetaOutputSchema,
 } from "@/server/mcp/output-schemas";
 import { withMcpProjectAuth } from "@/server/mcp/project-auth";
-import { formatMcpTable, readPath, type McpTableColumn } from "@/server/mcp/table";
+import {
+  formatMcpTable,
+  readPath,
+  type McpTableColumn,
+} from "@/server/mcp/table";
 import { projectIdSchema } from "@/server/mcp/schemas";
 
 const REFERRING_DOMAIN_COLUMNS: McpTableColumn<unknown>[] = [
   { header: "domain", value: (row) => readPath(row, "domain") },
   { header: "backlinks", value: (row) => readPath(row, "backlinks") },
-  { header: "referring pages", value: (row) => readPath(row, "referringPages") },
+  {
+    header: "referring pages",
+    value: (row) => readPath(row, "referringPages"),
+  },
   { header: "rank", value: (row) => readPath(row, "rank") },
 ];
 

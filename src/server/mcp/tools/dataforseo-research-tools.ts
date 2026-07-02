@@ -512,7 +512,8 @@ type RankedKeywordRow = {
 
 function toRankedKeywordRow(item: unknown): RankedKeywordRow {
   return {
-    keyword: readPath(item, "keyword_data", "keyword") ?? readPath(item, "keyword"),
+    keyword:
+      readPath(item, "keyword_data", "keyword") ?? readPath(item, "keyword"),
     rank:
       readPath(item, "ranked_serp_element", "serp_item", "rank_absolute") ??
       readPath(item, "ranked_serp_element", "rank_absolute") ??
@@ -545,7 +546,8 @@ const LOCAL_BUSINESS_COLUMNS: McpTableColumn<unknown>[] = [
 const LOCAL_SERP_COLUMNS: McpTableColumn<unknown>[] = [
   {
     header: "rank",
-    value: (row) => readPath(row, "rank_absolute") ?? readPath(row, "rank_group"),
+    value: (row) =>
+      readPath(row, "rank_absolute") ?? readPath(row, "rank_group"),
   },
   { header: "title", value: (row) => readPath(row, "title") },
   { header: "rating", value: (row) => readPath(row, "rating", "value") },

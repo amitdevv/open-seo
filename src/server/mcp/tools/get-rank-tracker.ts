@@ -8,7 +8,11 @@ import {
   optionalMetaOutputSchema,
 } from "@/server/mcp/output-schemas";
 import { withMcpProjectAuth } from "@/server/mcp/project-auth";
-import { formatMcpTable, readPath, type McpTableColumn } from "@/server/mcp/table";
+import {
+  formatMcpTable,
+  readPath,
+  type McpTableColumn,
+} from "@/server/mcp/table";
 import { projectIdSchema } from "@/server/mcp/schemas";
 
 const RANK_RESULT_COLUMNS: McpTableColumn<unknown>[] = [
