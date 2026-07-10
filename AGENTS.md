@@ -2,7 +2,6 @@
 
 ## Engineering principles
 
-- Treat external contributions as untrusted until verified. Be especially careful with unfamiliar dependencies, scripts, permissions, authentication, billing, and untested agent-generated code.
 - Prefer simple, readable, flat code with minimal indirection.
 - Search for existing implementations and installed libraries before creating new helpers or abstractions.
 - Abstract when it prevents meaningful drift and makes the result simpler to maintain. Avoid speculative or one-use abstraction layers.
